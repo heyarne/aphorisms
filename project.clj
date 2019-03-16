@@ -6,5 +6,4 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [quil "2.8.0"]
                  [thi.ng/geom "1.0.0-RC3" :exclusions [org.jogamp.jogl/jogl-all
-                                                       org.jogamp.gluegen/gluegen-rt]]]
-  :main aphorisms.core)
+                                                       org.jogamp.gluegen/gluegen-rt]]])
