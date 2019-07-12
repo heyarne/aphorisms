@@ -20,7 +20,7 @@
         w (- (* size 0.5) padding)]
     (q/with-translation [(* size 0.5) y]
       (q/with-rotation [(* q/PI n 0.25)]
-        (q/stroke (+ 200 (* n 50)) 40 (* (q/map-range n 0 1 0.5 1) 230))
+        (q/stroke (+ 200 (* n 50)) 40 (* (q/map-range n -0.5 0.5 0.5 1) 230))
         (q/line (- w) 0 w 0)))))
 
 (defn draw-state [state]
