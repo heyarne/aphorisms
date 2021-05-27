@@ -36,7 +36,7 @@
       ;; (q/ellipse (+ x x-off) y 1 1)
 
       ;; draw the oddly moving ridge
-      (q/stroke 320 50 80)
+      (q/stroke 320 50 20)
       (q/arc (- (+ x x-off) (* 0.5 size-l)) y size-l size-l end-l 0)
       (q/arc (+ (+ x x-off) (* 0.5 size-r)) y size-r size-r (- m/PI) end-r)
 
@@ -56,6 +56,5 @@
   :setup setup
   :update update-state
   :draw draw-state
-  :renderer :p2d
   :features [:keep-on-top :no-bind-output]
   :middleware [qm/pause-on-error qm/fun-mode])

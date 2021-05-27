@@ -28,7 +28,7 @@
   (q/background 350)
   {:world (make-world)})
 
-(def radius 10)
+(def radius 30)
 
 (defn register-mouse [state ev]
   (assoc state :mouse (v/vec2 ev)))
