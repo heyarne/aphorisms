@@ -2,13 +2,16 @@
 
 A Quil sketch designed to ... well, that part is up to you.
 
+## Development Environment
+
+The repository contains a couple of files that help set up a solid development environment.
+
+- `flake.nix` and `flake.lock` describe how to set up an environment using [Nix Flakes](https://nixos.wiki/wiki/Flakes). To use those set up `nix` with experimental flake support and run `nix develop`.
+- `.envrc` is set up so that the development environment is automatically set up via direnv
+
 ## Usage
 
-LightTable - open `core.clj` and press `Ctrl+Shift+Enter` to evaluate the file.
-
-Emacs - run cider, open `core.clj` and press `C-c C-k` to evaluate the file.
-
-REPL - run `(require 'aphorisms.core)`.
+There are individual files in `src/aphorisms`, each containing one sketch or variations of the same sketch.
 
 ## License
 

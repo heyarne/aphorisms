@@ -1,9 +1,12 @@
-{ pkgs ? import <nixpkgs> { }, lib ? pkgs.stdenv.lib }:
+{ pkgs ? import <nixpkgs> { }, }:
 
-pkgs.mkShell rec {
+let
+  lib = pkgs.lib;
+in pkgs.mkShell rec {
   name = "quil-env";
   buildInputs = with pkgs; [
     xorg_sys_opengl
+    clojure
   ];
   LD_LIBRARY_PATH = "${lib.makeLibraryPath buildInputs}";
 
