@@ -17,10 +17,8 @@ in pkgs.mkShell rec {
   _JAVA_AWT_WM_NONREPARENTING = "1";
 
   # we need to make sure the library is on the path for JOGL;
-  # also, there's a bug that is avoided with the second config line
+  # also, there's a bug that is avoided with the variable
   # https://github.com/processing/processing/issues/5476
-  JAVA_OPTS = "-Djava.library.path=${lib.makeLibraryPath buildInputs}"; 
-    # -Djogl.disable.openglcore=\"true\"
-  # LIBGL_ALWAYS_SOFTWARE = true;
-  # JAVA_LIBRARY_PATH = "${lib.makeLibraryPath buildInputs}";
+  JAVA_OPTS = "-Djava.library.path=${lib.makeLibraryPath buildInputs}";
+  LIBGL_ALWAYS_SOFTWARE = true; # ← this is the same as passing -Djogl.disable.openglcore="true"
 }
