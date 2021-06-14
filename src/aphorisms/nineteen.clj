@@ -31,8 +31,8 @@
 
 
 #_:clj-kondo/ignore
-(q/defsketch eighteen
-  :title "Eighteen"
+(q/defsketch nineteen
+  :title "Nineteen"
   :size (:size bounds)
   :settings #(q/pixel-density (q/display-density))
   :setup setup
