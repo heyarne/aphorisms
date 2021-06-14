@@ -41,6 +41,10 @@
           (apply q/vertex pt)))
       (q/end-shape :close))))
 
+(defn settings []
+  (q/pixel-density (q/display-density))
+  (q/smooth 2))
+
 (q/defsketch eleven
   :title "Eleven"
   :size [500 500]

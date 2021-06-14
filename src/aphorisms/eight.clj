@@ -37,6 +37,6 @@
   :setup setup
   :update update-state
   :draw draw-state
-  :renderer :p3d
+  :renderer :opengl
   :features [:keep-on-top :no-bind-output]
   :middleware [qm/pause-on-error qm/fun-mode])
