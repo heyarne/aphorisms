@@ -9,6 +9,12 @@ in pkgs.mkShell rec {
     clojure
   ];
   LD_LIBRARY_PATH = "${lib.makeLibraryPath buildInputs}";
+  
+  # wayland compat
+  # see https://discourse.ubuntu.com/t/environment-variables-for-wayland-hackers/12750
+  WAYLAND_DISPLAY = "no";
+  DISPLAY = ":0";
+  _JAVA_AWT_WM_NONREPARENTING = "1";
 
   # we need to make sure the library is on the path for JOGL;
   # also, there's a bug that is avoided with the second config line
